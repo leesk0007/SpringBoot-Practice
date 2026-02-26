@@ -16,12 +16,12 @@ public class ProductController {
         System.out.println("진짜 얘가 알아서 생성하나..");
     }
 
-    @RequestMapping(value = " ", method = RequestMethod.GET)
+    @RequestMapping(value = "/product", method = RequestMethod.GET)
     public String getProduct(){
         return productService.getProduct();
     }
-
-    public String saveProduct() {
+    @RequestMapping(value = "/product", method = RequestMethod.POST)
+    public void saveProduct() {
         productService.saveProduct();
     }
 }
