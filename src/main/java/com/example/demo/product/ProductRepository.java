@@ -7,13 +7,14 @@ import java.util.HashMap;
 
 @Component
 public class ProductRepository {
+    private int id = 1;
     private Map<Integer, String> db = new HashMap<>();
 
     public String getProduct() {
         return db.get(1);
     }
 
-    public void saveProduct() {
-        db.put(1,"NoteBook");
+    public void saveProduct(String productName) {
+        db.put(id++,productName);
     }
 }
