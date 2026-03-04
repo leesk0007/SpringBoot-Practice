@@ -8,13 +8,13 @@ import java.util.HashMap;
 @Component
 public class ProductRepository {
     private int id = 1;
-    private Map<Integer, String> db = new HashMap<>();
+    private Map<Integer, Product> db = new HashMap<>();
 
-    public String getProduct() {
-        return db.get(1);
+    public String getProduct(int id) {
+        return db.get(id).getName();
     }
 
-    public void saveProduct(String productName) {
-        db.put(id++,productName);
+    public void saveProduct(Product product) {
+        db.put(id++,product);
     }
 }
