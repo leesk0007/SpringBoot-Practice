@@ -2,15 +2,15 @@ package com.example.demo.product;
 
 public class Product {
     private String name;
-    private int id;
+    private int price;
     private String description;
 
     public String getDescription() {
         return description;
     }
 
-    public int getId() {
-        return id;
+    public int getPrice() {
+        return price;
     }
 
     public String getName() {

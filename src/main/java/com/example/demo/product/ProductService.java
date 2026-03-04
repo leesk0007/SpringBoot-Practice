@@ -2,8 +2,10 @@ package com.example.demo.product;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+//@Component
+@Service
 public class ProductService {
     private ProductRepository productRepository;
 
@@ -12,7 +14,7 @@ public class ProductService {
         this.productRepository = productRepository;
     }
 
-    public String getProduct(int id){
+    public Product getProduct(int id){
         return productRepository.getProduct(id);
     }
 
